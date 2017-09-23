@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Camera Settings" >
+        <!--<EditTextPreference-->
+            <!--android:title="@string/pref_title_images"-->
+            <!--android:summary="@string/pref_user_name_summary"-->
+            <!--android:key="prefUsername"/>-->
+
+        <ListPreference
+            android:key="prefCamera"
+            android:title="Live Camera"
+            android:summary="Choose what camera to use" />
+
+
+        <ListPreference
+            android:key="prefSizeResize"
+            android:title="Re-sized Image"
+            android:summary="Set what the image should be resized to"
+            android:entries="@array/imageResize"
+            android:entryValues="@array/imageResizeValues" />
+
+        <ListPreference
+            android:defaultValue="4x11"
+            android:key="prefCalibSize"
+            android:title="Checkerboard Size"
+            android:summary="Set what grid size to look for"
+            android:entries="@array/calibSize"
+            android:entryValues="@array/calibSizeValues" />
+
+        <!--<Preference-->
+            <!--android:key="filePicker"-->
+            <!--android:title="Export Folder"-->
+            <!--android:summary="Pick where the calibration files should export to" />-->
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Finished" >
+
+        <Preference
+            android:key="exitlink"
+            android:title="Click Here to Exit"
+            android:summary="Start the calibration" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
